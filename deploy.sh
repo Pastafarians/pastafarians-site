@@ -1,4 +1,4 @@
-bundle exec jekyll build
+/Library/Ruby/Gems/2.0.0/gems/jekyll-2.4.0/bin/jekyll build
 
 zip -r _site.zip _site
 scp _site.zip pastafarians@nitron.se.rit.edu:~/
