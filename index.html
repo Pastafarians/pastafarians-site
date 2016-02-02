@@ -4,78 +4,91 @@ title: Index
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset='utf-8'>
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="viewport" content="width=640">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
 
-<link rel="stylesheet" href="{{site.baseurl}}stylesheets/core.css" media="screen">
-<link rel="stylesheet" href="{{site.baseurl}}stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-<link rel="stylesheet" href="{{site.baseurl}}stylesheets/github-light.css">
+    <link rel="stylesheet" href="{{site.baseurl}}stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="{{site.baseurl}}stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="{{site.baseurl}}stylesheets/github-light.css">
 
-<script type="text/javascript" src="{{site.baseurl}}javascripts/modernizr.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="{{site.baseurl}}javascripts/headsmart.min.js"></script>
-<script type="text/javascript">
+    <script type="text/javascript" src="{{site.baseurl}}javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
 $(document).ready(function () {
-    $('#main_content').headsmart()
-    })
-</script>
-<title>Linguine by Pastafarians</title>
-</head>
+  $('#main_content').headsmart()
+})
+    </script>
+    <title>Linguine by Pastafarians</title>
+  </head>
 
-<body>
-<a id="forkme_banner" href="https://github.com/Pastafarians/linguine-node">View on GitHub</a>
-<div class="shell">
+  <body>
+    <a id="forkme_banner" href="https://github.com/Pastafarians/linguine-node">View on GitHub</a>
+    <div class="shell">
 
-  <header>
-    <span class="ribbon-outer">
-      <span class="ribbon-inner">
-        <h1>Linguine</h1>
-        <h2>A Web-Based Language Analysis Tool!</h2>
-      </span>
-      <span class="left-tail"></span>
-      <span class="right-tail"></span>
-    </span>
-  </header>
-
-  <section id="downloads">
-    <span class="inner">
-      <a href="https://waffle.io/Pastafarians/linguine" class="zip">Issue Tracker</a><a href="https://drive.google.com/folderview?id=0B3euyV-Zmi84fno5TGxDeElLbkZZanBYZ0MzbjlhdW5OY2tESmR6ZlhpRUEwdnlBZFFyakE&usp=sharing" class="tgz">Google Drive</a>
-    </span>
-  </section>
-
-
-  <span class="banner-fix"></span>
-
-  <section id="main_content">
-    <h3>Most Recent Updates</h3>
-    <ul>
-      {% for post in site.posts %}
-      <li>
-      <a href="{{ post.url | replace_first:'/','' }}">{{post.title}}</a>
-      </li>
-      {% endfor %}
-    </ul>
-    <h3>
-      <h3>Project Synopsis</h3>
-      <p>The Linguine tool is an open source web application that can be used to perform language analysis on text data. With a heavy focus on visualization, automated language processing techniques can be applied to a collection of texts. 
-      Linguine aims to be user friendly and to eliminate the need to know programming or have detailed knowledge of algorithms used to perform language analysis tasks. This is accomplished by taking the users through a clear application flow where they are able to upload their texts, select preprocessing options, choose which analyses to perform, and to view and export visualizations as well as processed raw data for further analysis. This workflow allows the tool to be used by beginners and experts alike, introducing newer language scientists to a common set of tools while still being flexible enough for more experienced users to continue working with results exported from the tool.  
-      The project has been in progress for two academic years and already supports a limited set of analysis and visualizations. The team’s goal for the 2015-16 academic year is to include a more robust suite of analysis functionalities, and to pair each with relevant visual output. Additional goals for this project will be to conduct comprehensive user testing and ensure application maintainability and scalability. By improving the overall usability and feature set of the base developed by previous senior project teams, Linguine has potential as an important tool in language science education.</p> 
-    </section>
-
-    <footer>
-      <span class="ribbon-outer">
-        <span class="ribbon-inner">
-          <p>this project by <a href="https://github.com/Pastafarians">Pastafarians</a> can be found on <a href="https://github.com/Pastafarians/linguine-node">GitHub</a></p>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Linguine</h1>
+            <h2>A Web-Based Language Analysis Tool!</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
         </span>
-        <span class="left-tail"></span>
-        <span class="right-tail"></span>
-      </span>
-      <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
-      <span class="octocat"></span>
-    </footer>
+      </header>
 
-  </div>
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://waffle.io/Pastafarians/linguine" class="zip">Issue Tracker</a><a href="https://drive.google.com/folderview?id=0B3euyV-Zmi84fno5TGxDeElLbkZZanBYZ0MzbjlhdW5OY2tESmR6ZlhpRUEwdnlBZFFyakE&usp=sharing" class="tgz">Google Drive</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+      <section id="main_content">
+        <h3>Spring 2016</h3>
+        <ul>
+          {% for post in site.posts %}
+          {% if post.term == "spring" %}
+          <li>
+            <a href="{{ post.url | replace_first:'/','' }}">{{post.title}}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+        
+        <h3>Fall 2015</h3>
+        <ul>
+          {% for post in site.posts %}
+          {% if post.term != "spring" %}
+          <li>
+            <a href="{{ post.url | replace_first:'/','' }}">{{post.title}}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+
+        <h3>Project Synopsis</h3>
+        <p>The Linguine tool is an open source web application that can be used to perform language analysis on text data. With a heavy focus on visualization, automated language processing techniques can be applied to a collection of texts. 
+        Linguine aims to be user friendly and to eliminate the need to know programming or have detailed knowledge of algorithms used to perform language analysis tasks. This is accomplished by taking the users through a clear application flow where they are able to upload their texts, select preprocessing options, choose which analyses to perform, and to view and export visualizations as well as processed raw data for further analysis. This workflow allows the tool to be used by beginners and experts alike, introducing newer language scientists to a common set of tools while still being flexible enough for more experienced users to continue working with results exported from the tool.  
+        The project has been in progress for two academic years and already supports a limited set of analysis and visualizations. The team’s goal for the 2015-16 academic year is to include a more robust suite of analysis functionalities, and to pair each with relevant visual output. Additional goals for this project will be to conduct comprehensive user testing and ensure application maintainability and scalability. By improving the overall usability and feature set of the base developed by previous senior project teams, Linguine has potential as an important tool in language science education.</p> 
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/Pastafarians">Pastafarians</a> can be found on <a href="https://github.com/Pastafarians/linguine-node">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
   </body>
-  </html>
+</html>
